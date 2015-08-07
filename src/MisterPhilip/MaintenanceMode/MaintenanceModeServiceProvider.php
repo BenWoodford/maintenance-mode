@@ -46,7 +46,7 @@ class MaintenanceModeServiceProvider extends ServiceProvider
      */
     protected function loadViews()
     {
-        $this->loadViewsFrom(base_path() . '/views', 'maintenancemode');
+        $this->loadViewsFrom(BASE_PATH . 'views', 'maintenancemode');
 
         $this->publishes([
             BASE_PATH . 'views' => base_path('resources/views/vendor/maintenancemode'),
