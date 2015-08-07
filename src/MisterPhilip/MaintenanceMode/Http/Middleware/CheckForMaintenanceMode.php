@@ -126,7 +126,7 @@ class CheckForMaintenanceMode implements Middleware
                 $this->app['session']->start();
 
                 // The user isn't exempt, let's show them the maintenance page!
-                $view = $this->app['config']->get('maintenancemode.view-page', 'maintenancemode::app-down');
+                $view = $this->app['config']->get('maintenancemode.view', 'maintenancemode::app-down');
 
                 // $view = 'errors.503';
                 return new Response(view($view, $info), 503);
